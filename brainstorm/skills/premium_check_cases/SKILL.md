@@ -34,14 +34,12 @@ Any variables defined by tool presence should be assessed purely from its presen
 
 > {FEATURE_PITCH}
 >
-> Connect the Brainstorm connector to use premium features like {FEATURE_NAME_COPY}.
+> Sign in to Brainstorm to use this feature.
 >
-> Sign up {SIGNUP_MODIFIER} or log in to get connected.
->
-> [Sign up {SIGNUP_MODIFIER}](https://app.bandwidth.email/signup?feature_type={FEATURE_TYPE}&feature={FEATURE_ID}&connect=true&product=claude)  [Log in](https://app.bandwidth.email/login?feature_type={FEATURE_TYPE}&feature={FEATURE_ID}&connect=true&product=claude)
+> [Sign up {SIGNUP_MODIFIER}](https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&product=claude)  [Log in](https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&product=claude)
 
 Present the `ChatCoworkConnectConfirm` prompt with USER_INPUT_TOOL:
-- Prompt: Have you signed in & connected?
+- Prompt: Have you signed in?
 - Options:
   - Yes
   - Not now
@@ -71,11 +69,9 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 ## If CODE_CLIENT=`cli`
 
 > {FEATURE_PITCH}
->
-> Connect the Brainstorm connector to use premium features like {FEATURE_NAME_COPY}.
 
 Present the `CliConnectChoice` prompt with USER_INPUT_TOOL:
-- Prompt: Sign up {SIGNUP_MODIFIER} or log in to use this feature.
+- Prompt: Sign up {SIGNUP_MODIFIER} or log in to Brainstorm to use this feature.
 - Options:
   - Sign up
   - Log in
@@ -83,7 +79,7 @@ Present the `CliConnectChoice` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Sign up` to `CliConnectChoice`
 
-AUTH_URL = the URL returned by `mcp__plugin_brainstorm_brainstorm-server__authenticate`, with `&mode=signup&feature_type={FEATURE_TYPE}&feature={FEATURE_ID}` appended.
+AUTH_URL = the URL returned by `mcp__plugin_brainstorm_brainstorm-server__authenticate`, with `&mode=signup&feature={FEATURE_ID}` appended.
 Open {AUTH_URL} with the OPEN_URL_TOOL.
 
 Present the `CliSignInConfirm` prompt with USER_INPUT_TOOL:
@@ -94,7 +90,7 @@ Present the `CliSignInConfirm` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Log in` to `CliConnectChoice`
 
-AUTH_URL = the URL returned by `mcp__plugin_brainstorm_brainstorm-server__authenticate`, with `&mode=login&feature_type={FEATURE_TYPE}&feature={FEATURE_ID}` appended.
+AUTH_URL = the URL returned by `mcp__plugin_brainstorm_brainstorm-server__authenticate`, with `&mode=login&feature={FEATURE_ID}` appended.
 Open {AUTH_URL} with the OPEN_URL_TOOL.
 
 Present the `CliSignInConfirm` prompt with USER_INPUT_TOOL:
@@ -118,11 +114,9 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 ## If CODE_CLIENT=`claude-desktop`
 
 > {FEATURE_PITCH}
->
-> Connect the Brainstorm connector to use premium features like {FEATURE_NAME_COPY}.
 
 Present the `CodeDesktopConnectChoice` prompt with USER_INPUT_TOOL:
-- Prompt: Sign up {SIGNUP_MODIFIER} or log in to use this feature.
+- Prompt: Sign up {SIGNUP_MODIFIER} or log in to Brainstorm to use this feature.
 - Options:
   - Sign up
   - Log in
@@ -130,7 +124,7 @@ Present the `CodeDesktopConnectChoice` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Sign up` to `CodeDesktopConnectChoice`
 
-Open https://app.bandwidth.email/signup?feature_type={FEATURE_TYPE}&feature={FEATURE_ID}&connect=true&product=claude with the OPEN_URL_TOOL.
+Open https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&product=claude with the OPEN_URL_TOOL.
 
 Present the `CodeDesktopConnectConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Have you signed up & connected?
@@ -140,7 +134,7 @@ Present the `CodeDesktopConnectConfirm` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Log in` to `CodeDesktopConnectChoice`
 
-Open https://app.bandwidth.email/login?feature_type={FEATURE_TYPE}&feature={FEATURE_ID}&connect=true&product=claude with the OPEN_URL_TOOL.
+Open https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&product=claude with the OPEN_URL_TOOL.
 
 Present the `CodeDesktopConnectConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Have you logged in & connected?
@@ -174,13 +168,11 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > {FEATURE_PITCH}
 >
-> Connect the Brainstorm connector to use premium features like {FEATURE_NAME_COPY}.
+> Sign in to Brainstorm to use this feature.
 >
-> Sign up {SIGNUP_MODIFIER} or log in to get connected.
+> [Sign up {SIGNUP_MODIFIER}](https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&product=claude)  [Log in](https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&product=claude)
 >
-> [Sign up {SIGNUP_MODIFIER}](https://app.bandwidth.email/signup?feature_type={FEATURE_TYPE}&feature={FEATURE_ID}&connect=true&product=claude)  [Log in](https://app.bandwidth.email/login?feature_type={FEATURE_TYPE}&feature={FEATURE_ID}&connect=true&product=claude)
->
-> Once you've connected, start a new session to use {FEATURE_NAME_COPY}.
+> Once you've signed in, start a new session to continue.
 
 Do not perform CORE_INSTRUCTIONS!
 
@@ -191,9 +183,9 @@ Do not perform CORE_INSTRUCTIONS!
 
 > {FEATURE_PITCH}
 >
-> You need to create your free Brainstorm account to use this feature.
+> Create a free Brainstorm account to use this feature.
 >
-> [Sign up free for Brainstorm]({PLUGIN_ORIGIN}/signup?feature_type={FEATURE_TYPE}&feature={FEATURE_ID})
+> [Sign up free]({PLUGIN_ORIGIN}/signup?feature={FEATURE_ID})
 
 Present the `FreeSignupLinkConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Have you signed up?
@@ -217,17 +209,17 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > {FEATURE_PITCH}
 >
-> You need to create your free Brainstorm account to use this feature.
+> Create a free Brainstorm account to use this feature.
 
 Present the `SignupChoice` prompt with USER_INPUT_TOOL:
-- Prompt: Sign up free for Brainstorm?
+- Prompt: Sign up free to continue
 - Options:
   - Sign up
   - Not now
 
 ### If user answers `Sign up` to `SignupChoice`
 
-Open {PLUGIN_ORIGIN}/signup?feature_type={FEATURE_TYPE}&feature={FEATURE_ID} with the OPEN_URL_TOOL.
+Open {PLUGIN_ORIGIN}/signup?feature={FEATURE_ID} with the OPEN_URL_TOOL.
 
 Present the `FreeSignupOpenConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Have you signed up?
@@ -251,9 +243,9 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > {FEATURE_PITCH}
 >
-> You need to create your Brainstorm account & upgrade to the {PLAN_NAME} plan to use this premium feature. [See pricing]({PLUGIN_ORIGIN}/plans)
+> Create your Brainstorm account & upgrade to the {PLAN_NAME} plan to use this premium feature. [See pricing]({PLUGIN_ORIGIN}/plans)
 >
-> [Sign up for Brainstorm]({PLUGIN_ORIGIN}/signup?feature_type={FEATURE_TYPE}&feature={FEATURE_ID})
+> [Sign up]({PLUGIN_ORIGIN}/signup?feature={FEATURE_ID})
 
 Present the `PaidLinkSignupConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Have you signed up?
@@ -277,31 +269,20 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > {FEATURE_PITCH}
 >
-> You need to create your Brainstorm account & upgrade to the {PLAN_NAME} plan to use this premium feature. [See pricing]({PLUGIN_ORIGIN}/plans)
+> Create your Brainstorm account & upgrade to the {PLAN_NAME} plan to use this premium feature. [See pricing]({PLUGIN_ORIGIN}/plans)
 
 Present the `PaidOpenSignupChoice` prompt with USER_INPUT_TOOL:
-- Prompt: Sign up or log in to Brainstorm?
+- Prompt: Sign up to continue
 - Options:
   - Sign up
-  - Log in
   - Not now
 
 ### If user answers `Sign up` to `PaidOpenSignupChoice`
 
-Open {PLUGIN_ORIGIN}/signup?feature_type={FEATURE_TYPE}&feature={FEATURE_ID} with the OPEN_URL_TOOL.
+Open {PLUGIN_ORIGIN}/signup?feature={FEATURE_ID} with the OPEN_URL_TOOL.
 
 Present the `PaidOpenSigninConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Have you signed up?
-- Options:
-  - Yes
-  - Never mind
-
-### If user answers `Log in` to `PaidOpenSignupChoice`
-
-Open {PLUGIN_ORIGIN}/login?feature_type={FEATURE_TYPE}&feature={FEATURE_ID} with the OPEN_URL_TOOL.
-
-Present the `PaidOpenSigninConfirm` prompt with USER_INPUT_TOOL:
-- Prompt: Have you logged in?
 - Options:
   - Yes
   - Never mind
@@ -314,7 +295,7 @@ Auto-retry the user's original attempt to use {FEATURE_NAME_COPY} (treat as new 
 
 Do not perform CORE_INSTRUCTIONS! Tell the user that they can run the feature again later if they change their mind.
 
-### If user answers anything other than (`Sign up`, `Log in`, or `Not now` to `PaidOpenSignupChoice` || `Yes` or `Never mind` to `PaidOpenSigninConfirm`)
+### If user answers anything other than (`Sign up` or `Not now` to `PaidOpenSignupChoice` || `Yes` or `Never mind` to `PaidOpenSigninConfirm`)
 
 Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
@@ -325,9 +306,9 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > {FEATURE_PITCH}
 >
-> Upgrade to the {PLAN_NAME} plan to use this premium feature. [See pricing]({PLUGIN_ORIGIN}/plans)
+> Upgrade to the Brainstorm {PLAN_NAME} plan to use this premium feature. [See pricing]({PLUGIN_ORIGIN}/plans)
 >
-> [Upgrade to the {PLAN_NAME} plan]({CHECKOUT_URL})
+> [Upgrade]({CHECKOUT_URL})
 
 Present the `UpgradeLinkConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Have you upgraded?
@@ -351,10 +332,10 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > {FEATURE_PITCH}
 >
-> Upgrade to the {PLAN_NAME} plan to use this premium feature. [See pricing]({PLUGIN_ORIGIN}/plans)
+> Upgrade to the Brainstorm {PLAN_NAME} plan to use this premium feature. [See pricing]({PLUGIN_ORIGIN}/plans)
 
 Present the `UpgradeOpenChoice` prompt with USER_INPUT_TOOL:
-- Prompt: Upgrade to the {PLAN_NAME} plan?
+- Prompt: Upgrade your account?
 - Options:
   - Upgrade
   - Not now
@@ -388,9 +369,9 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > {LIMIT_REACHED_MESSAGE}
 >
-> Upgrade to the {PLAN_NAME} plan to continue using this feature. [See pricing]({PLUGIN_ORIGIN}/plans)
+> Upgrade to the Brainstorm {PLAN_NAME} plan to continue using this feature. [See pricing]({PLUGIN_ORIGIN}/plans)
 >
-> [Upgrade to the {PLAN_NAME} plan]({CHECKOUT_URL})
+> [Upgrade]({CHECKOUT_URL})
 
 Present the `UpgradeLinkConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Have you upgraded?
@@ -414,10 +395,10 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > {LIMIT_REACHED_MESSAGE}
 >
-> Upgrade to the {PLAN_NAME} plan to continue using this feature. [See pricing]({PLUGIN_ORIGIN}/plans)
+> Upgrade to the Brainstorm {PLAN_NAME} plan to continue using this feature. [See pricing]({PLUGIN_ORIGIN}/plans)
 
 Present the `UpgradeOpenChoice` prompt with USER_INPUT_TOOL:
-- Prompt: Upgrade to the {PLAN_NAME} plan?
+- Prompt: Upgrade your account?
 - Options:
   - Upgrade
   - Not now
@@ -517,9 +498,9 @@ Do not perform CORE_INSTRUCTIONS! The user is at the top-most limit available fo
 
 > Your last Brainstorm subscription payment failed. Your payment method may need to be updated or another issue may have prevented payment.
 >
-> Resolve the issue in billing settings to continue using Brainstorm premium features.
+> Resolve the issue in billing settings to continue using Brainstorm.
 >
-> [Go to billing settings]({PLUGIN_ORIGIN}/billing)
+> [Go to billing settings]({PLUGIN_ORIGIN}/account)
 
 Present the `BillingLinkConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Did you resolve the failed payment issue?
@@ -543,7 +524,7 @@ Do not perform CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 > Your last Brainstorm subscription payment failed. Your payment method may need to be updated or another issue may have prevented payment.
 >
-> Resolve the issue in billing settings to continue using Brainstorm premium features.
+> Resolve the issue in billing settings to continue using Brainstorm.
 
 Present the `BillingOpenChoice` prompt with USER_INPUT_TOOL:
 - Prompt: Go to billing settings?
@@ -553,7 +534,7 @@ Present the `BillingOpenChoice` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Yes` to `BillingOpenChoice`
 
-Open {PLUGIN_ORIGIN}/billing with the OPEN_URL_TOOL.
+Open {PLUGIN_ORIGIN}/account with the OPEN_URL_TOOL.
 
 Present the `BillingOpenConfirm` prompt with USER_INPUT_TOOL:
 - Prompt: Did you resolve the failed payment issue?
