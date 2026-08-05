@@ -1,11 +1,11 @@
 {
   "name": "brainstorm",
   "displayName": "Brainstorm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate, expand, and refine ideas across topics. Quick brainstorms for fast inspiration; deep brainstorms for richer multi-angle exploration with refined results.",
   "author": { "name": "Brainstorm Labs" },
   "license": "LicenseRef-Plugpass-EULA-1.0",
   "metadata": {
-    "plugpass-plugin-id": "019f59f3-e60d-73fc-851e-5879ded43db6"
+    "plugpass-plugin-id": "foU3nD3f"
   }
 }

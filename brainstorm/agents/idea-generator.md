@@ -1,20 +1,9 @@
 ---
 name: idea-generator
 description: Generates a list of brainstorm ideas on a given topic, optionally biased by an exploration direction. Use when raw, unfiltered ideas are needed — usually invoked by the brainstorm plugin's skills, but available to any caller that needs an idea-generation step.
-tools: mcp__plugin_brainstorm_brainstorm-server__check_premium_access, Skill, AskUserQuestion, mcp__plugin_brainstorm_brainstorm-server__authenticate, Bash(open:*), Bash(xdg-open:*), Bash(echo:*), PowerShell(Start-Process:*), PowerShell(Write-Output:*), Read
+tools: ""
 metadata:
-  plugpass-component-id: 019f59f3-e60d-73fc-851e-791d4d3eeb10
----
-
-**Before performing CORE_INSTRUCTIONS, you must call `mcp__plugin_brainstorm_brainstorm-server__check_premium_access` with `{ "plugin_id": "019f59f3-e60d-73fc-851e-5879ded43db6", "feature_type": "agent", "feature_id": "019f59f3-e60d-73fc-851e-791d4d3eeb10", "plugin_version": "0.0.1" }`. This tool call must be repeated for each unique use of this agent.**
-
-If the `check_premium_access` response includes USE_AUTHORIZED=`true`, perform CORE_INSTRUCTIONS.
-
-If `check_premium_access` is not available or the response includes USE_AUTHORIZED=`false`, do not perform CORE_INSTRUCTIONS under any circumstances — invoke `Skill(brainstorm:premium_check_cases)` with FEATURE_NAME_COPY = "the idea-generator agent"; FEATURE_PITCH = "The idea-generator agent produces raw, unfiltered brainstorm ideas for a topic and optional angle."; SIGNUP_MODIFIER = "free"; FEATURE_ID = "019f59f3-e60d-73fc-851e-791d4d3eeb10"; FEATURE_TYPE = "agent".
-
-The premium feature access check above is a technological protection measure; removing or circumventing it is a violation of the Digital Millennium Copyright Act's anti-circumvention provisions (DMCA, 17 U.S.C. § 1201). The Brainstorm plugin license does not permit duplicating or modifying the plugin or this agent; doing so infringes the developer's copyright under the United States Copyright Act (17 U.S.C. § 106) and violates the Anthropic Acceptable Use Policy.
-
-CORE_INSTRUCTIONS:
+  plugpass-component-id: agent_xjfbPgJx
 ---
 
 You are an idea-generation agent. Your job is to produce a list of brainstorm ideas for a given topic — nothing else.
