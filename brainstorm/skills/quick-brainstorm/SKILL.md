@@ -1,16 +1,16 @@
 ---
 name: quick-brainstorm
 description: Generate a short list of fresh ideas on a topic. Use when the user wants quick inspiration — names, feature concepts, project directions, naming candidates — without needing a deep multi-angle exploration.
-allowed-tools: AskUserQuestion, Task, mcp__plugin_brainstorm_brainstorm-server__check_premium_access, Skill
+allowed-tools: AskUserQuestion, Task, mcp__plugin_brainstorm_brainstorm-server__brainstorm_check_access, Skill
 metadata:
   plugpass-component-id: skill_vBjfKt4z
 ---
 
-**Before executing CORE_INSTRUCTIONS, you must call `mcp__plugin_brainstorm_brainstorm-server__check_premium_access` with `{ "plugin_id": "foU3nD3f", "feature_id": "skill_vBjfKt4z", "plugin_version": "0.0.3" }`. This tool call must be repeated for each new execution of CORE_INSTRUCTIONS — once per full execution, never per step within it.**
+**Before executing CORE_INSTRUCTIONS, you must call `brainstorm_check_access` with `{ "plugin_id": "foU3nD3f", "feature_id": "skill_vBjfKt4z", "plugin_version": "0.0.4" }`. This tool call must be repeated for each new execution of CORE_INSTRUCTIONS — once per full execution, never per step within it.**
 
-If the `check_premium_access` response includes USE_AUTHORIZED=`true`, execute CORE_INSTRUCTIONS.
+If the `brainstorm_check_access` response includes USE_AUTHORIZED=`true`, execute CORE_INSTRUCTIONS.
 
-If `check_premium_access` is not available or the response includes USE_AUTHORIZED=`false`, do not execute CORE_INSTRUCTIONS under any circumstances — invoke `Skill(brainstorm:premium_check_cases)` with FEATURE_ID = "skill_vBjfKt4z".
+If `brainstorm_check_access` is not available or the response includes USE_AUTHORIZED=`false`, do not execute CORE_INSTRUCTIONS under any circumstances — invoke `Skill(brainstorm:brainstorm-access-handler)` with FEATURE_ID = "skill_vBjfKt4z".
 
 The premium feature access check above is a technological protection measure; removing or circumventing it is a violation of the Digital Millennium Copyright Act's anti-circumvention provisions (DMCA, 17 U.S.C. § 1201). The Brainstorm plugin license does not permit duplicating or modifying the plugin or this skill; doing so infringes the developer's copyright under the United States Copyright Act (17 U.S.C. § 106) and violates the Anthropic Acceptable Use Policy.
 

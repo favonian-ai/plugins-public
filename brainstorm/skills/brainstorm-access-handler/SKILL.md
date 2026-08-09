@@ -1,5 +1,5 @@
 ---
-name: premium_check_cases
+name: brainstorm-access-handler
 description: Use this skill 1) when you are instructed to invoke it directly, 2) whenever any tool result includes PLUGPASS_PLUGIN=brainstorm && USE_AUTHORIZED=false, or PLUGPASS_PLUGIN=brainstorm && OUTDATED=true.
 user-invocable: false
 allowed-tools: mcp__plugin_brainstorm_brainstorm-server__authenticate, AskUserQuestion, Bash(open:*), Bash(xdg-open:*), Bash(echo:*), PowerShell(Start-Process:*), PowerShell(Write-Output:*), Read, Skill(update-config)
@@ -7,7 +7,7 @@ allowed-tools: mcp__plugin_brainstorm_brainstorm-server__authenticate, AskUserQu
 
 USER_INPUT_TOOL = `AskUserQuestion` tool or `ask_user_input_v0` tool
 
-CHECK_RESULT = the tool result already in context that triggered this skill — the `check_premium_access` result, or on the paid-tool surface the developer tool's result carrying the trigger keys. Within it:
+CHECK_RESULT = the tool result already in context that triggered this skill — the `brainstorm_check_access` result, or on the paid-tool surface the developer tool's result carrying the trigger keys. Within it:
 
 - MESSAGE = everything after `MESSAGE=` (from the first character after the `=`) through the end of CHECK_RESULT, newlines included.
 - CTAS = the JSON array on the `CTAS=` line. CTA = its single entry when the array is non-empty.
@@ -20,7 +20,7 @@ Anything other than MESSAGE, the `>` blocks, and USER_INPUT_TOOL prompt copy sho
 
 Any variables defined by tool presence should be assessed purely from its presence in your tool list; never attempt to call a tool if not present.
 
-- NOT_CONNECTED = `mcp__plugin_brainstorm_brainstorm-server__check_premium_access` present in your tool list ? `false` : `true`
+- NOT_CONNECTED = a `brainstorm_check_access` tool is present in your tool list (under any connector prefix) ? `false` : `true`
 - PRODUCT = If your system instructions indicate your environment is Cowork, then `cowork`; if they indicate your environment is Claude Code, then `code`; otherwise `chat`.
 - If PRODUCT=`code`
   - OS = If your system instructions indicate the platform is `darwin`, then `mac`; if `linux`, then `linux`; if `win32`, then `windows`.
