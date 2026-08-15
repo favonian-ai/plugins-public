@@ -48,7 +48,7 @@ STANDING RULES (they govern every section below):
 
 > Sign in to Brainstorm to use this feature.
 >
-> [Sign up](https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&product=claude)  [Log in](https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&product=claude)
+> [Sign up](https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)  [Log in](https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
 
 Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
@@ -122,7 +122,7 @@ Present the `ConnectChoice` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Sign up` to `ConnectChoice`
 
-Open https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&product=claude with the OPEN_URL_TOOL.
+Open https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic with the OPEN_URL_TOOL.
 
 Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
@@ -133,7 +133,7 @@ Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Log in` to `ConnectChoice`
 
-Open https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&product=claude with the OPEN_URL_TOOL.
+Open https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic with the OPEN_URL_TOOL.
 
 Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
@@ -161,7 +161,7 @@ Apply the Retry standing rule.
 
 > Sign in to Brainstorm to use this feature.
 >
-> [Sign up](https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&product=claude)  [Log in](https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&product=claude)
+> [Sign up](https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)  [Log in](https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
 >
 > Once you've signed in, start a new session to continue.
 
