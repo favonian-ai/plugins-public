@@ -6,7 +6,7 @@ metadata:
   plugpass-component-id: skill_JemMfeBc
 ---
 
-**Before executing CORE_INSTRUCTIONS, you must call `brainstorm_check_access` with `{ "plugin_id": "foU3nD3f", "feature_id": "skill_JemMfeBc", "plugin_version": "0.0.4" }`. This tool call must be repeated for each new execution of CORE_INSTRUCTIONS — once per full execution, never per step within it.**
+**Before executing CORE_INSTRUCTIONS, you must call `brainstorm_check_access` (if not loaded, attempt to load it via tool search) with `{ "plugin_id": "foU3nD3f", "feature_id": "skill_JemMfeBc", "plugin_version": "0.0.4" }`. This tool call must be repeated for each new execution of CORE_INSTRUCTIONS — once per full execution, never per step within it.**
 
 If the `brainstorm_check_access` response includes USE_AUTHORIZED=`true`, execute CORE_INSTRUCTIONS.
 

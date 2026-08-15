@@ -18,7 +18,7 @@ Present each USER_INPUT_TOOL prompt exactly as specified, setting each option's 
 
 Anything other than MESSAGE, the `>` blocks, and USER_INPUT_TOOL prompt copy should be interpreted as instructions for you (or the main agent) to follow. A `>` block is a message for the user. Replace each {VARIABLE} in the `>` blocks and USER_INPUT_TOOL prompt copy with its value; do not state a variable verbatim in its token form. Output the result as your own normal assistant message — never through a tool call — do not narrate, add a preamble or sign-off, wrap it in a quote block, or print the `>` characters themselves.
 
-Any variables defined by tool presence should be assessed purely from its presence in your tool list; never attempt to call a tool if not present.
+Any variables defined by tool presence should be assessed purely from its presence in your tool list (if not loaded, attempt to load it via tool search); never attempt to call a tool if not present.
 
 - NOT_CONNECTED = a `brainstorm_check_access` tool is present in your tool list (under any connector prefix) ? `false` : `true`
 - PRODUCT = If your system instructions indicate your environment is Cowork, then `cowork`; if they indicate your environment is Claude Code, then `code`; otherwise `chat`.
