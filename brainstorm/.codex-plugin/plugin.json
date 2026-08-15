@@ -1,6 +1,6 @@
 {
   "name": "brainstorm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Generate, expand, and refine ideas across topics. Quick brainstorms for fast inspiration; deep brainstorms for richer multi-angle exploration with refined results.",
   "author": { "name": "Brainstorm Labs" },
   "license": "LicenseRef-Plugpass-EULA-1.0",
@@ -12,6 +12,9 @@
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
     "shortDescription": "Fast idea generation and multi-angle refinement.",
-    "longDescription": "Generate, expand, and refine ideas across any topic. Quick brainstorms for fast inspiration; deep brainstorms explore from multiple angles and refine to the strongest few."
+    "longDescription": "Generate, expand, and refine ideas across any topic. Quick brainstorms for fast inspiration; deep brainstorms explore from multiple angles and refine to the strongest few.",
+    "composerIcon": "./assets/brainstorm.svg",
+    "logo": "./assets/brainstorm.svg",
+    "logoDark": "./assets/brainstorm.svg"
   }
 }
