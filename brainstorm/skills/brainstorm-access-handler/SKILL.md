@@ -21,17 +21,16 @@ Anything other than MESSAGE, the `>` blocks, and USER_INPUT_TOOL prompt copy sho
 Any variables defined by tool presence should be assessed purely from its presence in your tool list (if not loaded, attempt to load it via tool search); never attempt to call a tool if not present.
 
 - NOT_CONNECTED = a `brainstorm_check_access` tool is present in your tool list (under any connector prefix) ? `false` : `true`
-- PRODUCT = If your system instructions indicate your environment is Cowork, then `cowork`; if they indicate your environment is Claude Code, then `code`; otherwise `chat`.
-- If PRODUCT=`code`
-  - OS = If your system instructions indicate the platform is `darwin`, then `mac`; if `linux`, then `linux`; if `win32`, then `windows`.
-  - CODE_CLIENT = If (OS=`mac` || OS=`linux`), then Bash `echo "CLAUDE_CODE_ENTRYPOINT=$CLAUDE_CODE_ENTRYPOINT"`; if OS=`windows`, then PowerShell `Write-Output "CLAUDE_CODE_ENTRYPOINT=$env:CLAUDE_CODE_ENTRYPOINT"` (expected value: `cli` || `claude-desktop` || `remote`)
-  - If (CODE_CLIENT=`cli` || CODE_CLIENT=`claude-desktop`): OPEN_URL_TOOL = If OS=`mac`, then Bash `open "<url>"`; if OS=`linux`, then Bash `xdg-open "<url>"`; if OS=`windows`, then PowerShell `Start-Process "<url>"`. (OPEN_URL_TOOL is otherwise undefined — `remote` has no local browser to open.)
-- FEATURE_ID = the value passed on the `Skill()` invoke that started this skill, else the `FEATURE_ID` line of CHECK_RESULT.
-- AGENT = FEATURE_ID starts with `agent_` ? `true` : `false`
-- If AGENT=`true`:
-  - SUBAGENT = USER_INPUT_TOOL present in your tool list ? `false` : `true`. Claude products only: if your system instructions indicate a non-Claude product (e.g. ChatGPT or Codex), SUBAGENT=`false` — plugin agents don't run as subagents there, so an absent USER_INPUT_TOOL just means a promptless surface.
-  - If SUBAGENT=`false`, run the applicable section's instructions yourself.
-  - If SUBAGENT=`true`, you cannot interact with the user — the main agent must. Resolve the applicable section yourself first: determine PRODUCT / OS / CODE_CLIENT (the environment is shared with the main agent), resolve every tool-presence condition against the **main agent's** tools — the main agent carries USER_INPUT_TOOL, so it counts as present even though it is absent here — substitute every variable, and write out the exact remaining steps with concrete tool names. Then append that fully-built instruction block — MESSAGE first, then the steps, including the applicable standing rules — to your final response, prefaced with: "Present the following to the user and follow these instructions exactly:". Do not include the raw `PLUGPASS_PLUGIN` or `USE_AUTHORIZED` lines in what you append. If USE_AUTHORIZED=`true` (the OUTDATED case), always execute CORE_INSTRUCTIONS to process the user's request first, then append the built nudge block the same way.
+- PLATFORM = If your system instructions indicate an OpenAI product (Codex or ChatGPT), then `openai`; otherwise (an Anthropic / Claude product) `claude`.
+- If PLATFORM=`claude`:
+  - CLAUDE_PRODUCT = If your system instructions indicate your environment is Cowork, then `cowork`; if they indicate your environment is Claude Code, then `code`; otherwise `chat`.
+  - If CLAUDE_PRODUCT=`code`:
+    - OS = If your system instructions indicate the platform is `darwin`, then `mac`; if `linux`, then `linux`; if `win32`, then `windows`.
+    - CODE_CLIENT = If (OS=`mac` || OS=`linux`), then Bash `echo "CLAUDE_CODE_ENTRYPOINT=$CLAUDE_CODE_ENTRYPOINT"`; if OS=`windows`, then PowerShell `Write-Output "CLAUDE_CODE_ENTRYPOINT=$env:CLAUDE_CODE_ENTRYPOINT"` (expected value: `cli` || `claude-desktop` || `remote`)
+    - If (CODE_CLIENT=`cli` || CODE_CLIENT=`claude-desktop`): OPEN_URL_TOOL = If OS=`mac`, then Bash `open "<url>"`; if OS=`linux`, then Bash `xdg-open "<url>"`; if OS=`windows`, then PowerShell `Start-Process "<url>"`. (OPEN_URL_TOOL is otherwise undefined — `remote` has no local browser to open.)
+- If PLATFORM=`openai`:
+  - OPENAI_CLIENT = If your system instructions include `# Codex desktop context`, then `desktop`; otherwise `codex-cli`.
+- FEATURE_ID = the FEATURE_ID passed when this skill was invoked, else the `FEATURE_ID` line of CHECK_RESULT.
 
 STANDING RULES (they govern every section below):
 
@@ -44,11 +43,31 @@ STANDING RULES (they govern every section below):
 
 # If NOT_CONNECTED=true
 
-## If (PRODUCT=`chat` || PRODUCT=`cowork`)
+## If OPENAI_CLIENT=`codex-cli`
+
+> Connect Brainstorm to use this feature:
+>
+> 1. Run `codex mcp login brainstorm-server` in your terminal
+> 2. Sign up or log in to Brainstorm
+> 3. End and resume the session with `codex resume` to continue
+
+Do not execute CORE_INSTRUCTIONS!
+
+## If OPENAI_CLIENT=`desktop`
+
+> Connect Brainstorm to use this feature:
+>
+> 1. Open a terminal in the app with the shortcut: `` control ` `` (control + backtick)
+> 2. Paste `codex mcp login brainstorm-server` & press `Enter`
+> 3. Sign up or log in to Brainstorm
+
+Do not execute CORE_INSTRUCTIONS!
+
+## If (CLAUDE_PRODUCT=`chat` || CLAUDE_PRODUCT=`cowork`)
 
 > Sign in to Brainstorm to use this feature.
 >
-> [Sign up](https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)  [Log in](https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
+> [Sign up](https://brainstorm.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)  [Log in](https://brainstorm.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
 
 Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
@@ -122,7 +141,7 @@ Present the `ConnectChoice` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Sign up` to `ConnectChoice`
 
-Open https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic with the OPEN_URL_TOOL.
+Open https://brainstorm.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic with the OPEN_URL_TOOL.
 
 Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
@@ -133,7 +152,7 @@ Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
 ### If user answers `Log in` to `ConnectChoice`
 
-Open https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic with the OPEN_URL_TOOL.
+Open https://brainstorm.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic with the OPEN_URL_TOOL.
 
 Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
@@ -161,7 +180,7 @@ Apply the Retry standing rule.
 
 > Sign in to Brainstorm to use this feature.
 >
-> [Sign up](https://app.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)  [Log in](https://app.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
+> [Sign up](https://brainstorm.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)  [Log in](https://brainstorm.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
 >
 > Once you've signed in, start a new session to continue.
 
@@ -222,7 +241,7 @@ Apply the Retry standing rule.
 
 # If OUTDATED=true in CHECK_RESULT
 
-`OUTDATED` only ever rides an authorized response, so the component's work is never blocked. Complete CORE_INSTRUCTIONS first, then run this nudge — at most once per session. Unlike every other case, never say "Do not execute CORE_INSTRUCTIONS" here; the work is already done. (This section is authored only into `native`-marketplace plugins; the server never returns `OUTDATED` otherwise.)
+`OUTDATED` only ever rides an authorized response, so the component's work is never blocked. Complete CORE_INSTRUCTIONS first, then run this nudge — at most once per session. Unlike every other case, never say "Do not execute CORE_INSTRUCTIONS" here; the work is already done. (This section is authored with the plugin’s own marketplace facts — the Plugpass or Claude Community marketplace; the server never returns `OUTDATED` for official-marketplace plugins.)
 
 PLUGIN_ORIGIN = the value on the `PLUGIN_ORIGIN` line of CHECK_RESULT.
 
@@ -230,7 +249,7 @@ PLUGIN_ORIGIN = the value on the `PLUGIN_ORIGIN` line of CHECK_RESULT.
 
 > The Brainstorm plugin is out of date.
 >
-> Turn on auto-update for the Plugpass marketplace to keep the plugin up to date with the latest features & fixes, or run `/plugin marketplace update plugpass-marketplace` to update manually each time.
+> Turn on auto-update for the Plugpass Marketplace to keep the plugin up to date with the latest features & fixes, or run `/plugin marketplace update plugpass-marketplace` to update manually each time.
 
 Present the `AutoUpdateChoice` prompt with USER_INPUT_TOOL:
 
@@ -251,7 +270,11 @@ Do nothing further.
 
 Respond to the user's message as appropriate.
 
-## If (PRODUCT=`chat` || PRODUCT=`cowork` || CODE_CLIENT=`claude-desktop` || CODE_CLIENT=`remote`)
+## If CODE_CLIENT=`claude-desktop`
+
+Read `~/.claude/settings.json`. If it contains an `extraKnownMarketplaces.plugpass-marketplace` entry, follow the `If CODE_CLIENT=cli` section's instructions; if the entry or file is absent, follow the `If (CLAUDE_PRODUCT=chat || CLAUDE_PRODUCT=cowork || CODE_CLIENT=remote)` section's instructions.
+
+## If (CLAUDE_PRODUCT=`chat` || CLAUDE_PRODUCT=`cowork` || CODE_CLIENT=`remote`)
 
 > The Brainstorm plugin is out of date.
 >
