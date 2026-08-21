@@ -1,26 +1,26 @@
-# Plugin End User License Agreement — Provider-Specific Terms
+# Plugin End User License Agreement
 
-These Provider-Specific Terms supplement the Bonterms Standard End User Agreement (Version 1.0) (the "Standard Agreement"), under which Brainstorm ("Provider," "we," or "us") makes the Brainstorm plugin (the "Product") available through the Plugpass marketplace. They are the "Provider-Specific Terms" referred to in Section 1.1 of the Standard Agreement and, under Section 1.4, prevail over the Standard Agreement in the event of a conflict. A verbatim copy of the Standard Agreement is reproduced in `eula-base.md`; it is published by Bonterms, which is not a party to this Agreement. Capitalized terms used but not defined in these Provider-Specific Terms have the meanings given in the Standard Agreement.
+## Provider-Specific Terms
+
+These Provider-Specific Terms supplement the Bonterms Standard End User Agreement (Version 1.0) (the "Standard Agreement"), under which Brainstorm ("Provider," "we," or "us") makes the Brainstorm plugin (the "Product") available. They are the "Provider-Specific Terms" referred to in Section 1.1 of the Standard Agreement and, under Section 1.4, prevail over the Standard Agreement in the event of a conflict. A verbatim copy of the Standard Agreement is reproduced below these Provider-Specific Terms; it is published by Bonterms, which is not a party to this Agreement. Capitalized terms used but not defined in these Provider-Specific Terms have the meanings given in the Standard Agreement; the "Marketplace" referred to in the Standard Agreement means any marketplace, directory, or store through which the Product is distributed (for example, a Claude or ChatGPT plugin directory, or another marketplace through which Provider distributes the Product), and a "Listing" means the Product's listing there or on Provider's own pages for the Product. Orders, fees, and Customer's account for the Product are governed by Provider's Terms of Service presented on the Product's pages, which prevail over Section 10 (Fees) of the Standard Agreement.
 
 > BY INSTALLING, ACCESSING, OR OTHERWISE USING THE PRODUCT, OR BY CLICKING TO ACCEPT THIS AGREEMENT, YOU AGREE TO THIS AGREEMENT (INCLUDING THE STANDARD AGREEMENT AND THESE PROVIDER-SPECIFIC TERMS) AND REPRESENT THAT YOU HAVE THE AUTHORITY TO DO SO. IF YOU DO NOT AGREE, DO NOT INSTALL, ACCESS, OR USE THE PRODUCT.
 
 In addition to entering into this Agreement upon an Order under Section 1.2 of the Standard Agreement, you enter into this Agreement when you first install, access, or use the Product.
 
-## 1. Technological Protection Measures; Anti-Circumvention
+### 1. Technological Protection Measures; Anti-Circumvention
 
 The Product limits access to its paid features through a premium-feature access check, together with the authentication and entitlement-validation mechanisms it relies on (collectively, the "Access Controls"). The Access Controls are technological protection measures that control access to the Product and its protected features. Without limiting Section 7.3(e) of the Standard Agreement, Customer will not, and will not permit or enable anyone else to, remove, disable, bypass, or circumvent the Access Controls, or develop, distribute, or use any product or service to do so. Removing or circumventing the Access Controls violates the anti-circumvention provisions of the U.S. Digital Millennium Copyright Act (17 U.S.C. § 1201). This Section does not restrict any act that cannot be prohibited under 17 U.S.C. § 1201(f) or Article 6 of Directive 2009/24/EC, to the extent applicable.
 
-## 2. Policies and Attachments
+### 2. Policies and Attachments
 
 Provider's Acceptable Use Policy (Section 7.1), Data Protection Addendum (Section 3.3), Security Measures (Section 3.2), Support Policy (Section 5.1), and Service Level Agreement (Section 5.2), if any, are those identified in the Product's Listing. Where none is identified for a given item, the corresponding default in the Standard Agreement applies.
 
----
-
-# Bonterms Standard End User Agreement (Version 1.0)
+## Bonterms Standard End User Agreement (Version 1.0)
 
 Note: For use in Marketplace transactions. Bonterms publishes this Standard Agreement but is not a party to the Agreement created between Provider and Customer and has no responsibility to either for its use.
 
-## 1. Using this Standard Agreement.
+### 1. Using this Standard Agreement.
 
 1.1. Standard Agreement. This Bonterms Standard End User Agreement (Version 1.0) ("Standard Agreement") sets forth the terms and conditions under which Provider makes available Subscriptions to its Cloud Service or Provider Software (each, a "Product") offered through a Listing on the Marketplace. Provider may (i) make additions to or modifications of this Standard Agreement ("Additional Terms") or (ii) add Attachments by stating as such in its Listing. Any Additional Terms and any Attachments are collectively referred to as "Provider-Specific Terms." Capitalized terms are defined in context or in Section 20 (Definitions).
 
@@ -30,7 +30,7 @@ Note: For use in Marketplace transactions. Bonterms publishes this Standard Agre
 
 1.4. Order of Precedence. In the event of a conflict between the elements of the terms and conditions making up the Agreement, the order of precedence is: (i) any Amendment, (ii) Provider-Specific Terms and (iii) this Standard Agreement.
 
-## 2. Products.
+### 2. Products.
 
 2.1. Cloud Service. Subject to this Agreement, Customer may use the Cloud Service for its own business purposes in accordance with the Permitted Use.
 
@@ -38,7 +38,7 @@ Note: For use in Marketplace transactions. Bonterms publishes this Standard Agre
 
 2.3. Users. Customer may permit Users to use the Product on its behalf. Customer is responsible for provisioning and managing its User accounts, for its Users' actions through the Product and for their compliance with this Agreement. Customer will ensure that Users keep their login credentials confidential and will promptly notify Provider upon learning of any compromise of User accounts or credentials.
 
-## 3. Customer Data.
+### 3. Customer Data.
 
 3.1. Use of Customer Data. Subject to this Agreement, Provider will access and use Customer Data solely to provide and maintain the Cloud Service, Support and Professional Services under this Agreement ("Use of Customer Data"). Use of Customer Data includes sharing Customer Data as Customer directs through the Cloud Service, but Provider will not otherwise disclose Customer Data to third parties except as permitted in this Agreement.
 
@@ -48,17 +48,17 @@ Note: For use in Marketplace transactions. Bonterms publishes this Standard Agre
 
 3.4. Usage Data. Provider may collect Usage Data and use it to operate, improve and support the Product and for other lawful business purposes, including benchmarking and reports. However, Provider will not disclose Usage Data externally unless it is (a) de-identified so that it does not identify Customer, its Users or any other person and (b) aggregated with data across other customers.
 
-## 4. Mutual Compliance with Laws.
+### 4. Mutual Compliance with Laws.
 
 Each party will comply with all Laws that apply to its performance under this Agreement.
 
-## 5. Support and SLA.
+### 5. Support and SLA.
 
 5.1. Support. Provider will provide Support for the Product as described in any Support Policy identified in the Provider-Specific Terms.
 
 5.2. SLA. Provider will adhere to any Service Level Agreement (SLA) identified in the Provider-Specific Terms.
 
-## 6. Warranties.
+### 6. Warranties.
 
 6.1. Mutual Warranties. Each party represents and warrants that: (a) it has the legal power and authority to enter into this Agreement, and (b) it will use industry-standard measures to avoid introducing Viruses into the Cloud Service.
 
@@ -66,7 +66,7 @@ Each party will comply with all Laws that apply to its performance under this Ag
 
 6.3. Disclaimers. Except as expressly set out in this Agreement, each party disclaims all warranties, whether express, implied, statutory or otherwise, including warranties of merchantability, fitness for a particular purpose, title and noninfringement. Provider's warranties in this Section 6 do not apply to issues arising from Third-Party Platforms or misuse or unauthorized modifications of the Product. These disclaimers apply to the full extent permitted by Law.
 
-## 7. Usage Rules.
+### 7. Usage Rules.
 
 7.1. Compliance. Customer (a) will comply with any Acceptable Use Policy (AUP) identified in the Provider-Specific Terms and (b) represents and warrants that it has all rights necessary to use Customer Data with the Cloud Service and grant Provider the rights to Customer Data specified in this Agreement, without violating third-party intellectual property, privacy or other rights. Between the parties, Customer is responsible for the content and accuracy of Customer Data.
 
@@ -74,23 +74,23 @@ Each party will comply with all Laws that apply to its performance under this Ag
 
 7.3. Restrictions. Customer will not and will not permit anyone else to: (a) sell, sublicense, distribute or rent the Product (in whole or part), grant non-Users access to the Product or use the Product to provide a hosted or managed service to others, (b) reverse engineer, decompile or seek to access the source code of the Product, except to the extent these restrictions are prohibited by Laws and then only upon advance notice to Provider, (c) copy, modify, create derivative works of or remove proprietary notices from the Product, (d) conduct security or vulnerability tests of the Cloud Service or interfere with its operation, (e) circumvent access restrictions to any Product or (f) use the Product to develop a product or service that competes with the Product.
 
-## 8. Third-Party Platforms.
+### 8. Third-Party Platforms.
 
 To the extent offered by Provider, Customer may choose to enable integrations or exchange Customer Data with Third-Party Platforms. Customer's use of a Third-Party Platform is governed by its agreement with the relevant provider, not this Agreement, and Provider is not responsible for Third-Party Platforms or how their providers use Customer Data.
 
-## 9. Professional Services.
+### 9. Professional Services.
 
 Provider will perform Professional Services as described in a Statement of Work, which may identify additional terms or milestones for the Professional Services. Customer will give Provider timely access to Customer Materials reasonably needed for Professional Services, and Provider will use the Customer Materials only for purposes of providing Professional Services. Subject to any limits in a Statement of Work, Customer will reimburse Provider's reasonable travel and lodging expenses incurred in providing Professional Services. Customer may use code or other deliverables that Provider furnishes as part of Professional Services only in connection with Customer's authorized use of the Product under this Agreement.
 
-## 10. Fees.
+### 10. Fees.
 
 Fees will be as stated in the Order and payment terms are as set forth in the Order or terms of the Marketplace.
 
-## 11. Suspension.
+### 11. Suspension.
 
 Provider may suspend Customer's access to the Cloud Service and related services due to a Suspension Event, but where practicable will give Customer prior notice so that Customer may seek to resolve the issue and avoid suspension. Provider is not required to give prior notice in exigent circumstances or for a suspension made to avoid material harm or violation of Law. Once the Suspension Event is resolved, Provider will promptly restore Customer's access to the Cloud Service in accordance with this Agreement. "Suspension Event" means (a) Customer's account is 30 days or more overdue, (b) Customer is in breach of Section 7 (Usage Rules) or (c) Customer's use of the Cloud Service risks material harm to the Cloud Service or others.
 
-## 12. Term and Termination.
+### 12. Term and Termination.
 
 12.1. Subscription Terms. Each Subscription Term will last for an initial 12-month period unless the Order states otherwise.
 
@@ -102,13 +102,13 @@ Provider may suspend Customer's access to the Cloud Service and related services
 
 12.5. Effect of Termination. (a) Customer's right to use the Product, Support and Professional Services will cease upon any termination or expiration of this Agreement, subject to this Section 12. (b) The following Sections will survive termination or expiration of this Agreement: 3.4 (Usage Data), 6.3 (Disclaimers), 7 (Usage Rules), 12.4 (Data Export and Deletion), 12.5 (Effect of Termination), 13 (Intellectual Property), 14 (Limitations of Liability), 15 (Indemnification), 16 (Confidentiality), 19 (General Terms) and 20 (Definitions). (c) Except where an exclusive remedy is provided, exercising a remedy under this Agreement, including termination, does not limit other remedies a party may have.
 
-## 13. Intellectual Property.
+### 13. Intellectual Property.
 
 13.1. Reserved Rights. Neither party grants the other any rights or licenses not expressly set out in this Agreement. Except for Provider's express rights in this Agreement, as between the parties, Customer retains all intellectual property and other rights in Customer Data and Customer Materials provided to Provider. Except for Customer's express rights in this Agreement, as between the parties, Provider and its licensors retain all intellectual property and other rights in the Product, Professional Services deliverables and related Provider technology.
 
 13.2. Feedback. If Customer gives Provider feedback regarding improvement or operation of the Product, Support or Professional Services, Provider may use the feedback without restriction or obligation. All feedback is provided "AS IS" and Provider will not publicly identify Customer as the source of feedback without Customer's permission.
 
-## 14. Limitations of Liability.
+### 14. Limitations of Liability.
 
 14.1. General Cap. Each party's entire liability arising out of or related to this Agreement will not exceed the General Cap.
 
@@ -120,7 +120,7 @@ Provider may suspend Customer's access to the Cloud Service and related services
 
 14.5. Liability Definitions. "Enhanced Cap" means three times (3x) the General Cap. "Enhanced Claims" means Provider's breach of Section 3.2 (Security) or either party's breach of Section 3.3 (DPA). "General Cap" means amounts paid or payable by Customer to Provider under this Agreement in the 12 months immediately preceding the first incident giving rise to liability. "Uncapped Claims" means (a) the indemnifying party's obligations under Section 15 (Indemnification), (b) either party's infringement or misappropriation of the other party's intellectual property rights, (c) any breach of Section 16 (Confidentiality), excluding breaches related to Customer Data and (d) liabilities that cannot be limited by Law.
 
-## 15. Indemnification.
+### 15. Indemnification.
 
 15.1. Indemnification by Provider. Provider, at its own cost, will defend Customer from and against any Provider-Covered Claims and will indemnify and hold harmless Customer from and against any damages or costs awarded against Customer (including reasonable attorneys' fees) or agreed in settlement by Provider resulting from the Provider-Covered Claims.
 
@@ -136,7 +136,7 @@ Provider may suspend Customer's access to the Cloud Service and related services
 
 15.7. Exclusive Remedy. This Section 15 sets out the indemnified party's exclusive remedy and the indemnifying party's sole liability regarding third-party claims of intellectual property infringement or misappropriation covered by this Section 15.
 
-## 16. Confidentiality.
+### 16. Confidentiality.
 
 16.1. Use and Protection. As recipient, each party will (a) use Confidential Information only to fulfill its obligations and exercise its rights under this Agreement, (b) not disclose Confidential Information to third parties without the discloser's prior approval, except as permitted in this Agreement and (c) protect Confidential Information using at least the same precautions recipient uses for its own similar information and no less than a reasonable standard of care.
 
@@ -146,15 +146,15 @@ Provider may suspend Customer's access to the Cloud Service and related services
 
 16.4. Remedies. Breach of this Section 16 may cause substantial harm for which monetary damages are an insufficient remedy. Upon a breach of this Section 16, the discloser is entitled to seek appropriate equitable relief, including an injunction, in addition to other remedies.
 
-## 17. Publicity.
+### 17. Publicity.
 
 Neither party may publicly announce this Agreement without the other party's prior approval or except as required by Laws.
 
-## 18. Trials and Betas.
+### 18. Trials and Betas.
 
 Use of Trials and Betas is permitted only for Customer's internal evaluation during the period designated in the Order (or if not designated, 30 days). Either party may terminate Customer's use of Trials and Betas at any time for any reason. Trials and Betas may be inoperable, incomplete or include features never released. Notwithstanding anything else in this Agreement, Provider offers no warranty, indemnity, SLA or Support for Trials and Betas and its liability for Trials and Betas will not exceed US$1,000.
 
-## 19. General Terms.
+### 19. General Terms.
 
 19.1. Assignment. Neither party may assign this Agreement without the prior consent of the other party, except that either party may assign this Agreement, with notice to the other party, in connection with the assigning party's merger, reorganization, acquisition or other transfer of all or substantially all of its assets or voting securities. Any non-permitted assignment is void. This Agreement will bind and inure to the benefit of each party's permitted successors and assigns.
 
@@ -184,7 +184,7 @@ Use of Trials and Betas is permitted only for Customer's internal evaluation dur
 
 19.14. Government Rights. To the extent applicable, the Product is "commercial computer software" or a "commercial item" for purposes of FAR 12.212 and DFARS 227.7202. Use, reproduction, release, modification, disclosure or transfer of the Product is governed solely by the terms of this Agreement, and all other use is prohibited.
 
-## 20. Definitions.
+### 20. Definitions.
 
 "Acceptable Use Policy" or "AUP" is defined in Section 7.1 (Compliance). "Additional Terms" is defined in Section 1.1 (Standard Agreement). "Agreement" is defined in Section 1.2 (Entering the Agreement). "Amendment" is defined in Section 19.5 (Amendments). "Attachments" means any AUP, Security Measures, SLA, Support Policy or other policies specified in the Provider-Specific Terms. "Cloud Service" means Provider's proprietary software as a service (SaaS) or cloud service as identified in the applicable Listing. "Confidential Information" means information disclosed by or on behalf of one party (as discloser) to the other party (as recipient) under this Agreement, in any form, which (a) the discloser identifies to recipient as "confidential" or "proprietary" or (b) should be reasonably understood as confidential or proprietary due to its nature and the circumstances of its disclosure. Provider's Confidential Information includes technical or performance information about the Product, and Customer's Confidential Information includes Customer Data. "Courts" is defined in Section 19.2 (Governing Law and Courts). "Customer" means the party placing the Order. "Customer Data" means any data, content or materials that Customer (including its Users) submits to its Cloud Service accounts, including from Provider Software or Third-Party Platforms. "Customer Materials" means materials and resources that Customer makes available to Provider in connection with Professional Services. "Data Protection Addendum" or "DPA" is defined in Section 3.3 (DPA). "Documentation" means Provider's standard usage documentation for the Product. Documentation is included in the definition of "Product" unless otherwise specified. "Force Majeure" means an unforeseen event beyond a party's reasonable control, such as a strike, blockade, war, pandemic, act of terrorism, riot, third-party Internet or utility failure, refusal of government license or natural disaster, where the affected party takes reasonable and customary measures to avoid or mitigate such event's effects. "Governing Law" is defined in Section 19.2 (Governing Law and Courts). "High-Risk Activities" means activities where use or failure of the Product could lead to death, personal injury or environmental damage, including life support systems, emergency services, nuclear facilities, autonomous vehicles or air traffic control. "Laws" means all laws, regulations, rules, court orders or other binding requirements of a government authority that apply to a party. "Listing" means Provider's description of its Product (and any related Support) and Subscriptions in a listing on the Marketplace that designates use of this Standard Agreement. "Marketplace" means the application marketplace or app store on which Provider has published a Listing and made available Subscriptions to their Product. "Open Source" is defined in Section 19.12. "Order" means an order by Customer for a Subscription that is entered into through the Marketplace. "Permitted Use" means use of a Product in accordance with the applicable Subscription, any Use Restrictions and the Documentation. "Product" is defined in Section 1.1 (Standard Agreement). "Professional Services" means training, migration or other professional services that Provider furnishes to Customer related to the Product. "Provider" means the party providing the Product. "Provider Software" means Provider's proprietary installed software or apps identified in the applicable Listing. "Provider-Specific Terms" is defined in Section 1.1 (Standard Agreement). "Security Measures" is defined in Section 3.2 (Security). "Sensitive Data" means (a) patient, medical or other protected health information regulated by the Health Insurance Portability and Accountability Act (as amended and supplemented) ("HIPAA"), (b) credit, debit, bank account or other financial account numbers, (c) social security numbers, driver's license numbers or other government ID numbers and (d) special categories of data enumerated in European Union Regulation 2016/679, Article 9(1) or any successor legislation. "Service Level Agreement" or "SLA" is defined in Section 5.2 (SLA). "Standard Agreement" is defined in Section 1.1 (Standard Agreement). "Statement of Work" means a statement of work for Professional Services that is signed by the parties and references this Agreement. "Subscription" means the right for Customer to access the Product and any related Support as described in a Listing and the applicable Order. "Subscription Term" means the term for a Subscription as identified in the Order. "Support" means support for the Product as described in Section 5.1 (Support). "Support Policy" is defined in Section 5.1 (Support). "Suspension Event" is defined in Section 11 (Suspension). "Third-Party Platform" means any product, add-on or platform not provided by Provider that Customer uses with the Cloud Service. "Trials and Betas" mean access to the Product on a free or trial basis or to particular features designated by Provider as "beta" or "early access." "Usage Data" means Provider's technical logs, data and learnings about Customer's use of the Product, but excluding Customer Data. "Use Restrictions" means user, seat, copy, installation, license or other scope of use restrictions for the Product as specified in a Listing or Order. "User" means anyone that Customer allows to use its accounts for the Product, who may include (a) employees, advisors and contractors of Customer and (b) others if permitted in this Agreement, the Documentation or a Listing. "Virus" means viruses, malicious code or similar harmful materials.
 
