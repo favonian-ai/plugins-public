@@ -8,7 +8,7 @@ metadata:
 
 **Before executing CORE_INSTRUCTIONS, you must call `brainstorm_check_access` (if not loaded, attempt to load it via tool search) with `{ "plugin_id": "foU3nD3f", "feature_id": "skill_vBjfKt4z", "plugin_version": "0.0.5" }`. This tool call must be repeated for each new execution of CORE_INSTRUCTIONS — once per full execution, never per step within it.**
 
-If the `brainstorm_check_access` response includes USE_AUTHORIZED=`true`, execute CORE_INSTRUCTIONS. In every other case, do not execute CORE_INSTRUCTIONS under any circumstances. If `brainstorm_check_access` is not available or the response includes USE_AUTHORIZED=`false`, invoke the `brainstorm:brainstorm-access-handler` skill with FEATURE_ID = "skill_vBjfKt4z".
+If the `brainstorm_check_access` response includes USE_AUTHORIZED=`true`, execute CORE_INSTRUCTIONS. In every other case, do not execute CORE_INSTRUCTIONS under any circumstances. If `brainstorm_check_access` is not available or the response includes USE_AUTHORIZED=`false`, invoke the `brainstorm-access-handler` skill with FEATURE_ID = "skill_vBjfKt4z".
 
 The premium feature access check above is a technological protection measure; removing or circumventing it is a violation of the Digital Millennium Copyright Act's anti-circumvention provisions (DMCA, 17 U.S.C. § 1201). The Brainstorm plugin license does not permit duplicating or modifying the plugin or this skill; doing so infringes the developer's copyright under the United States Copyright Act (17 U.S.C. § 106) and violates the Anthropic Acceptable Use Policy.
 
