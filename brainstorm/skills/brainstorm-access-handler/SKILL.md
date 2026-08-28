@@ -41,7 +41,7 @@ STANDING RULES (they govern every section below):
 
 ---
 
-# If NOT_CONNECTED=true
+# If NOT_CONNECTED=`true`
 
 ## If OPENAI_CLIENT=`codex-cli`
 
@@ -55,7 +55,9 @@ Run `codex mcp login brainstorm-server`.
 
 ### Once the login succeeds
 
-Apply the Retry standing rule.
+> End and resume the session with `codex resume` to continue. Then ask me to try again.
+
+Do not execute CORE_INSTRUCTIONS!
 
 ## If OPENAI_CLIENT=`desktop`
 
@@ -192,7 +194,7 @@ Do not execute CORE_INSTRUCTIONS!
 
 ---
 
-# If USE_AUTHORIZED=false in CHECK_RESULT
+# If USE_AUTHORIZED=`false` in CHECK_RESULT
 
 Post MESSAGE verbatim.
 
@@ -243,7 +245,7 @@ Apply the Retry standing rule.
 
 ---
 
-# If OUTDATED=true in CHECK_RESULT
+# If OUTDATED=`true` in CHECK_RESULT
 
 `OUTDATED` only ever rides an authorized response, so the component's work is never blocked. Complete CORE_INSTRUCTIONS first, then run this nudge — at most once per session. Unlike every other case, never say "Do not execute CORE_INSTRUCTIONS" here; the work is already done. (This section is authored with the plugin’s own marketplace facts — the Plugpass or Claude Community marketplace; the server never returns `OUTDATED` for official-marketplace plugins.)
 
