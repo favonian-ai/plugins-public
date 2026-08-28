@@ -36,7 +36,7 @@ STANDING RULES (they govern every section below):
 
 - Never execute CORE_INSTRUCTIONS on any non-authorized outcome (including NOT_CONNECTED — no check could run), under any circumstances.
 - **Retry:** If the user indicates they've completed the action that was blocking the feature — by answering the confirmation prompt or in their own words — retry the user's original attempted use of the feature. The retry is a new execution: the access check runs again.
-- **Decline:** If the user chooses the negative option at any prompt below — Do not execute CORE_INSTRUCTIONS! Tell the user that they can run the feature again later if they change their mind.
+- **Decline:** If the user declines — by choosing the negative option at any prompt below, or in their own words — Do not execute CORE_INSTRUCTIONS! Tell the user that they can run the feature again later if they change their mind.
 - **Anything else:** If the user answers anything other than the presented options — Do not execute CORE_INSTRUCTIONS! Respond to the user's message as appropriate.
 
 ---
@@ -45,13 +45,17 @@ STANDING RULES (they govern every section below):
 
 ## If OPENAI_CLIENT=`codex-cli`
 
-> Connect Brainstorm to use this feature:
+> Sign up or log in to Brainstorm to use this feature.
 >
-> 1. Run `codex mcp login brainstorm-server` in your terminal
-> 2. Sign up or log in to Brainstorm
-> 3. End and resume the session with `codex resume` to continue
+> Would you like me to open the signin page?
 
-Do not execute CORE_INSTRUCTIONS!
+### If the user indicates yes
+
+Run `codex mcp login brainstorm-server`.
+
+### Once the login succeeds
+
+Apply the Retry standing rule.
 
 ## If OPENAI_CLIENT=`desktop`
 
