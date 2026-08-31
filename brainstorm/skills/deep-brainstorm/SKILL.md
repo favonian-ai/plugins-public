@@ -8,7 +8,7 @@ metadata:
 
 If `brainstorm_check_access` is not available (unauthenticated, disconnected, or not discoverable via tool search) or the response includes USE_AUTHORIZED=`false`, you must immediately invoke the `brainstorm-access-handler` skill with FEATURE_ID = "skill_JemMfeBc" and follow the appropriate instructions.
 
-**Before executing CORE_INSTRUCTIONS, you must call `brainstorm_check_access` with `{ "plugin_id": "foU3nD3f", "feature_id": "skill_JemMfeBc", "plugin_version": "0.0.7" }`. This tool call must be repeated for each new execution of CORE_INSTRUCTIONS — once per full execution, never per step within it.**
+**Before executing CORE_INSTRUCTIONS, you must call `brainstorm_check_access` with `{ "plugin_id": "foU3nD3f", "feature_id": "skill_JemMfeBc", "plugin_version": "0.0.9" }`. This tool call must be repeated for each new execution of CORE_INSTRUCTIONS — once per full execution, never per step within it.**
 
 Only if the `brainstorm_check_access` response includes USE_AUTHORIZED=`true`, are you permitted to execute CORE_INSTRUCTIONS. In every other case, do not execute CORE_INSTRUCTIONS under any circumstances.
 

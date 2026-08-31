@@ -1,4 +1,4 @@
-# Plugin End User License Agreement
+# Plugin License Agreement
 
 ## Provider-Specific Terms
 

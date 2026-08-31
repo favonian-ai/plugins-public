@@ -1,6 +1,6 @@
 ---
 name: brainstorm-access-handler
-description: Use this skill 1) when you are instructed to invoke it directly, 2) whenever any tool result includes PLUGPASS_PLUGIN=brainstorm && USE_AUTHORIZED=false, or PLUGPASS_PLUGIN=brainstorm && OUTDATED=true.
+description: Use this skill 1) when you are instructed to invoke it directly, 2) whenever any tool result includes PLUGPASS_PLUGIN=brainstorm && USE_AUTHORIZED=false, or PLUGPASS_PLUGIN=brainstorm && UPDATE=recommended.
 user-invocable: false
 allowed-tools: mcp__plugin_brainstorm_brainstorm-server__authenticate, AskUserQuestion, Bash(open:*), Bash(xdg-open:*), Bash(echo:*), PowerShell(Start-Process:*), PowerShell(Write-Output:*), Read, Skill(update-config)
 ---
@@ -245,9 +245,9 @@ Apply the Retry standing rule.
 
 ---
 
-# If OUTDATED=`true` in CHECK_RESULT
+# If UPDATE=`recommended` in CHECK_RESULT
 
-`OUTDATED` only ever rides an authorized response, so the component's work is never blocked. Complete CORE_INSTRUCTIONS first, then run this nudge — at most once per session. Unlike every other case, never say "Do not execute CORE_INSTRUCTIONS" here; the work is already done. (This section is authored with the plugin’s own marketplace facts — the Plugpass or Claude Community marketplace; the server never returns `OUTDATED` for official-marketplace plugins.)
+`UPDATE=recommended` only ever rides an authorized response, so the component's work is never blocked. Complete CORE_INSTRUCTIONS first, then run this nudge — at most once per session. Unlike every other case, never say "Do not execute CORE_INSTRUCTIONS" here; the work is already done. (This section is authored with the plugin’s own marketplace facts — the Plugpass or Claude Community marketplace; the server never returns `UPDATE=recommended` for official-marketplace plugins.)
 
 PLUGIN_ORIGIN = the value on the `PLUGIN_ORIGIN` line of CHECK_RESULT.
 
