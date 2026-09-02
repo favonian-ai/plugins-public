@@ -73,7 +73,7 @@ Do not execute CORE_INSTRUCTIONS!
 
 > Sign in to Brainstorm to use this feature.
 >
-> [Sign up](https://brainstorm.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)  [Log in](https://brainstorm.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
+> [Sign up](https://brainstorm.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Log in](https://brainstorm.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
 
 Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
 
@@ -137,56 +137,19 @@ Apply the Retry standing rule.
 
 ## If CODE_CLIENT=`claude-desktop`
 
-Present the `ConnectChoice` prompt with USER_INPUT_TOOL:
+> Sign up or log in to Brainstorm to use this feature.
+>
+> Enter `/mcp`, then connect `brainstorm-server` to sign in.
+>
+> Let me know once you've signed in.
 
-- Prompt: Sign up or log in to Brainstorm to use this feature.
-- Options:
-  - Sign up
-  - Log in
-  - Not now
-
-### If user answers `Sign up` to `ConnectChoice`
-
-Open https://brainstorm.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic with the OPEN_URL_TOOL.
-
-Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
-
-- Prompt: Have you signed up & connected?
-- Options:
-  - Yes
-  - Never mind
-
-### If user answers `Log in` to `ConnectChoice`
-
-Open https://brainstorm.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic with the OPEN_URL_TOOL.
-
-Present the `ConnectConfirm` prompt with USER_INPUT_TOOL:
-
-- Prompt: Have you logged in & connected?
-- Options:
-  - Yes
-  - Never mind
-
-### If user answers `Yes` to `ConnectConfirm`
-
-> Press `cmd-R` (`ctrl-R` on Windows) to refresh the session to use this feature.
-
-Present the `RefreshConfirm` prompt with USER_INPUT_TOOL:
-
-- Prompt: Have you refreshed?
-- Options:
-  - Yes
-  - Cancel setup
-
-### If user answers `Yes` to `RefreshConfirm`
-
-Apply the Retry standing rule.
+Do not execute CORE_INSTRUCTIONS!
 
 ## If CODE_CLIENT=`remote`
 
 > Sign in to Brainstorm to use this feature.
 >
-> [Sign up](https://brainstorm.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)  [Log in](https://brainstorm.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
+> [Sign up](https://brainstorm.bandwidth.email/signup?feature={FEATURE_ID}&connect=web&platform=anthropic)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Log in](https://brainstorm.bandwidth.email/login?feature={FEATURE_ID}&connect=web&platform=anthropic)
 >
 > Once you've signed in, start a new session to continue.
 
@@ -255,7 +218,7 @@ PLUGIN_ORIGIN = the value on the `PLUGIN_ORIGIN` line of CHECK_RESULT.
 
 > The Brainstorm plugin is out of date.
 >
-> Turn on auto-update for the Plugpass Marketplace to keep the plugin up to date with the latest features & fixes, or run `/plugin marketplace update plugpass-marketplace` to update manually each time.
+> Turn on auto-update for the Plugpass Marketplace to keep the plugin up to date with the latest features & fixes.
 
 Present the `AutoUpdateChoice` prompt with USER_INPUT_TOOL:
 
