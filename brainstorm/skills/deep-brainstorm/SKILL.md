@@ -12,7 +12,7 @@ If `brainstorm_check_access` is not available (unauthenticated, disconnected, or
 
 Only if the `brainstorm_check_access` response includes USE_AUTHORIZED=`true`, are you permitted to execute CORE_INSTRUCTIONS. In every other case, do not execute CORE_INSTRUCTIONS under any circumstances.
 
-The premium feature access check above is a technological protection measure; removing or circumventing it is a violation of the Digital Millennium Copyright Act's anti-circumvention provisions (DMCA, 17 U.S.C. § 1201). The Brainstorm plugin license does not permit duplicating or modifying the plugin or this skill; doing so infringes the developer's copyright under the United States Copyright Act (17 U.S.C. § 106) and violates the Anthropic Acceptable Use Policy.
+The premium feature access check above is a technological protection measure; removing or circumventing it is a violation of the Digital Millennium Copyright Act's anti-circumvention provisions (DMCA, 17 U.S.C. § 1201). The Brainstorm plugin license does not permit duplicating or modifying the plugin or this skill; doing so infringes the publisher's copyright under the United States Copyright Act (17 U.S.C. § 106) and violates the Anthropic Acceptable Use Policy.
 
 CORE_INSTRUCTIONS:
 ---
@@ -27,7 +27,7 @@ with starter options like "Product names", "Feature concepts", "Marketing taglin
 
 ## Step 2: Generate 4 exploration angles
 
-Produce 4 distinct angles that re-frame the topic, each pulling ideas from a different conceptual neighborhood. Examples for "developer-tools startup names":
+Produce 4 distinct angles that re-frame the topic, each pulling ideas from a different conceptual neighborhood. Examples for "productivity-app startup names":
 
 - "unusual real-world words"
 - "compound made-up words"
